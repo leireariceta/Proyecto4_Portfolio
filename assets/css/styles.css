@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+/* variables y fuentes */
+/* (Sobre "roots" En la raiz de la web se ponen las variables, así en todas las capas interiores se va a poder utilziar */
+
+@font-face {
+    font-family: "HomemadeApple";
+    src: url("../fonts/HomemadeApple/HomemadeApple-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Ubuntu";
+    src: url("../fonts/Ubuntu/Ubuntu-Regular.ttf");
+}
+
+:root{
+    --color0: white;
+    --color1: #000000;
+    --color2: #808080;
+    --color3: #96045e;
+    --color4: #86c9c3;
+
+    --fuente1: "HomemadeApple";
+    --fuente2: "Ubuntu";
+
+    font-family: var(--fuente2);
+}
+
+h1{
+    font-size: 1.4rem;
+    color: var(--color1);
+    font-family: var(--fuente1);
+    font-size: 2.5rem;
+    transition: 3s;
+}
+
+h1:hover{
+    color: var(--color3);    
+}
+
+h3{
+    font-size: 16px;
+    font-family: var(--fuente2);
+    color: var(--color1);
+}
+
+h4{
+    font-size: 14px;
+    font-family: var(--fuente2);
+    color: var(--color1);
+}
+
+p{
+    font-size: 16px;
+    font-family: var(--fuente2);
+    color: var(--color1);
+}
+
+/*//////////*/
+
+html{
+    width: 100vw;
+    height: 100vh;
+
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../img/Background.jpg");
+
+    opacity: 70%;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:flex-start ;
+}
+
+#ContenedorNombre{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#ContenedorServicios{
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+
+    column-gap: 4rem;
+    margin-top: 0.5rem;
+
+    margin-inline: 3rem;
+
+}
+
+#ContenedorServicios p{
+    text-align: center;
+}
+
+
+#ContenedorServicios .Servicio{
+    width: 360px;
+    height: 600px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    row-gap: 1.5rem;
+}
+
+#ContenedorServicios .Servicio .ContenedorFoto{
+    width: 100%;
+    height: 80%;
+
+    overflow: hidden;
+}
+
+#ContenedorServicios .Servicio .ContenedorFoto img{
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+    filter: saturate(0);
+
+    transition: 1.5s;
+}
+
+#ContenedorServicios .Servicio .ContenedorFoto img:hover{
+    filter: saturate(1);
+    transform: scale(1.1);
+}
+
+#ContenedorDeveloper{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
